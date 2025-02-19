@@ -152,8 +152,8 @@ document.addEventListener("DOMContentLoaded", () => {
         }
     
         if (isValid) {
-            const botToken = "7973735099:AAE-MYlf-dsAKXPyklTxzGwZ_hB-oDG82wA";
-            const chatId = "948393191";
+            const botToken = "7577043320:AAG15LLVjDJK8frWq4qb8FZxuCbGnYWeY2Q";
+            const chatId = "6797351288";
     
             let productDetails = '';
             cart.forEach((product, index) => {
