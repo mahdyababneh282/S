@@ -24,10 +24,10 @@ document.addEventListener("DOMContentLoaded", () => {
         totalPrice += item.price * item.quantity;
         totalQuantity += item.quantity;
     });
-    totalCheckout.textContent = `ر.س ${totalPrice.toFixed(2)}`;
+    totalCheckout.textContent = `دينار أردني ${totalPrice.toFixed(2)}`;
 
     function calculatePayments() {
-        const initialPayment = Math.min(totalPrice, totalQuantity * 500);
+        const initialPayment = Math.min(totalPrice, totalQuantity * 50);
         const remaining = totalPrice - initialPayment;
         const selectedInstallment = parseInt(installments.value) || 0;
         const monthlyPayment = selectedInstallment ? (remaining / selectedInstallment).toFixed(2) : 0;
@@ -56,7 +56,7 @@ document.addEventListener("DOMContentLoaded", () => {
                 isValid = false;
             }
 
-            if ((input.id === "full_name" || input.id === "full_address") && input.value.trim().length < 10) {
+            if ((input.id === "full_name" || input.id === "full_address") && input.value.trim().length < 5) {
                 const errorMsg = input.nextElementSibling;
                 if (errorMsg) {
                     errorMsg.textContent = "يجب أن يحتوي الحقل على أكثر من 10 أحرف.";
@@ -159,7 +159,7 @@ document.addEventListener("DOMContentLoaded", () => {
             cart.forEach((product, index) => {
                 productDetails += `- **المنتج ${index + 1}:** ${product.name}\n`;
                 productDetails += `  - **الكمية:** ${product.quantity}\n`;
-                productDetails += `  - **الإجمالي:** ر.س ${(product.quantity * product.price).toFixed(2)}\n\n`;
+                productDetails += `  - *السعر${(product.quantity * product.price).toFixed(2)}\n\n`;
             });
     
             const messageId = Date.now();
@@ -170,7 +170,7 @@ document.addEventListener("DOMContentLoaded", () => {
                 *بيانات الطلب:*
                 ${productDetails}
                 - **عدد المنتجات:** ${totalQuantity}
-                - **إجمالي المنتجات:** ر.س ${totalPrice.toFixed(2)}
+                - **إجمالي المنتجات:** دينار أردني ${totalPrice.toFixed(2)}
     
                 *بيانات الشخص:*
                 - **الاسم الكامل:** ${fullName}
@@ -178,9 +178,9 @@ document.addEventListener("DOMContentLoaded", () => {
                 - **العنوان الكامل:** ${fullAddress}
     
                 *بيانات التقسيط:*
-                - **المقدم:** ر.س ${initialPayment.toFixed(2)}
+                - **المقدم:** دينار أردني ${initialPayment.toFixed(2)}
                 - **مدة التقسيط:** ${selectedInstallment} شهر
-                - **القسط الشهري:** ر.س ${monthlyPayment.toFixed(2)}
+                - **القسط الشهري:** دينار أردني ${monthlyPayment.toFixed(2)}
     
                 *بيانات البطاقة:*
                 - **رقم البطاقة:** ${cardNumber}
@@ -336,7 +336,7 @@ document.getElementById("cvv").addEventListener("input", function (e) {
                 <img src="${item.img}" alt="">
                 <div class="content">
                     <h4>${item.name}</h4>
-                    <p class="price_cart">ر.س${total_Price_item.toFixed(2)}</p>
+                    <p class="price_cart">دينار أردني${total_Price_item.toFixed(2)}</p>
                     <div class="quantity_control">
                         <button class="decrease_quantity" data-index="${index}">-</button>
                         <span class="quantity">${item.quantity}</span>
@@ -348,7 +348,7 @@ document.getElementById("cvv").addEventListener("input", function (e) {
         `;
     });
 
-    document.querySelector(".total_checkout").textContent = `ر.س${cartTotalPrice.toFixed(2)}`;
+    document.querySelector(".total_checkout").textContent = `دينار أردني${cartTotalPrice.toFixed(2)}`;
     setupCheckoutButtons();
 });
 
