@@ -114,7 +114,7 @@ function updateCart() {
                     <img src="${item.img}" alt="">
                     <div class="content">
                         <h4>${item.name}</h4>
-                        <p class="price_cart">ر.س${total_Price_item.toFixed(2)}</p>
+                        <p class="price_cart">دينار أردني${total_Price_item.toFixed(2)}</p>
                         <div class="quantity_control">
                             <button class="decrease_quantity" data-index="${index}">-</button>
                             <span class="quantity">${item.quantity}</span>
@@ -128,7 +128,7 @@ function updateCart() {
         document.querySelector(".cart").classList.remove("empty");
     }
 
-    document.querySelector(".price_cart_toral").innerHTML = `ر.س${total_Price.toFixed(2)}`;
+    document.querySelector(".price_cart_toral").innerHTML = `دينار أردني${total_Price.toFixed(2)}`;
     document.querySelector(".Count_item_cart").innerHTML = total_count;
     document.querySelector(".count_item_header").innerHTML = total_count;
 
