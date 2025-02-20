@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>ايفون استور</title>
+    <title>تيم استور</title>
     <meta name="description" content="تيم ستور  هي شركة عالمية رائدة تقدم خدماتها في مجال الاتصالات والهواتف المحمولة منذ 2016 موزع معتمد من شركة آبل في جميع أنحاء العالم">
     <link rel="icon" href="img/IMG_5579.JPG">
 
@@ -13,7 +13,40 @@
 
     <!-- ملف CSS -->
     <link rel="stylesheet" href="CSS/style.css">
-    <link rel="stylesheet" href="CSS/details.css">
+    <style>
+        .swiper-wrapper {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: flex-start;
+  gap: 25px;
+}
+
+.swiper-slide {
+  flex: 1 0 20%;
+  max-width: 250px;
+  box-sizing: border-box;
+  margin-bottom: 15px;
+}
+
+@media (max-width: 1200px) {
+  .swiper-slide {
+    flex: 1 0 30%; 
+  }
+  .swiper-wrapper {
+  justify-content: center;
+}
+}
+
+@media (max-width: 700px) {
+  .swiper-slide {
+    flex: 1 0 45%;
+    max-width: 180px;
+  }
+  .swiper-wrapper {
+  justify-content: center;
+}
+}
+    </style>
 </head>
 <body>
 
@@ -58,7 +91,7 @@
                             <option value="PlayStation.html">أجهزة بلاي ستيشن</option>
                             <option value="laptop.html">لابتوبات وشاشات</option>
                             <option value="ipad.html">ايباد</option>
-                        </select>                     
+                        </select>                         
                     </div>
 
                     <input type="text" name="search" id="search" placeholder="ابحث عن منتجات">
@@ -106,65 +139,272 @@
                     <ul class="nav_links">
 
                         <span onclick="open_Menu()" class="close_menu"><i class="fa-regular fa-circle-xmark"></i></span>
+
                         <li class="active"><a href="index.html">الرئيسية</a></li>
                         <li><a href="#foot">من نحن</a></li>
                         <li><a href="#foot">اتصل بنا</a></li>
                         <li><a href="iphone16.html">ايفون 16 بانواعه</a></li>
                         <li><a href="iphon15.html">ايفون 15 بانواعه</a></li>
-                        <li><a href="watch.html">ساعات ابل</a></li>
                     </ul>
                 </nav>
             </div>
         </div>
     </header>
-    
-    <div class="product-details-container">
-        <div class="product-image">
-            <img id="product-img" src="" alt="منتج">
+        <div class="slider_products slide">
+            <div class="container">
+                <div class="slide_product mySwiper">
+                    <div class="top_slide">
+                        <h2><i class="fa-solid fa-tags"></i>بلاي ستيشن 5</h2>
+                    </div>
+        
+                    <div class="products swiper-wrapper">
+
+                        <div class="swiper-slide product">
+                            <div class="img_product">
+                                <a href="Details.html" class="product-link"><img src="img/products/b0ff60f0-86b6-4f51-98ca-93a541484f05.jpg" alt="صورة المنتج 1"></a>
+                            </div>
+                            <div class="stars">
+                                <i class="fa-solid fa-star"></i>
+                                <i class="fa-solid fa-star"></i>
+                                <i class="fa-solid fa-star"></i>
+                                <i class="fa-solid fa-star"></i>
+                                <i class="fa-solid fa-star-half-alt"></i>
+                            </div>
+                            <p class="name_product"><a href="Details.html" class="product-link">بلاي ستيشن 5، قارىء اقراص، حزمة
+                            </a></p>
+                            <div class="price">
+                                <p><span>350 دينار أردني</span></p>
+                            </div>
+                            <div class="icons">
+                                <span class="btn_add_cart" data-id="235">
+                                    <i class="fa-solid fa-cart-shopping"></i> أضف للسلة
+                                </span>
+                                <span class="icon_product"><i class="fa-regular fa-heart"></i></span>
+                            </div>
+                        </div>
+                        <div class="swiper-slide product">
+                            <div class="img_product">
+                                <a href="Details.html" class="product-link"><img src="img/products/9542fb9e-5ebe-4dce-814f-c2facb6ceb9c.jpg" alt="صورة المنتج 1"></a>
+                            </div>
+                            <div class="stars">
+                                <i class="fa-solid fa-star"></i>
+                                <i class="fa-solid fa-star"></i>
+                                <i class="fa-solid fa-star"></i>
+                                <i class="fa-solid fa-star"></i>
+                                <i class="fa-solid fa-star-half-alt"></i>
+                            </div>
+                            <p class="name_product"><a href="Details.html" class="product-link">بلاي ستيشين 5، ديجتال، مع أداة تحكم إضافية باللون الاسود
+                            </a></p>
+                            <div class="price">
+                                <p><span>300 دينار أردني</span></p>
+                            </div>
+                            <div class="icons">
+                                <span class="btn_add_cart" data-id="236">
+                                    <i class="fa-solid fa-cart-shopping"></i> أضف للسلة
+                                </span>
+                                <span class="icon_product"><i class="fa-regular fa-heart"></i></span>
+                            </div>
+                        </div>
+                        <div class="swiper-slide product">
+                            <div class="img_product">
+                                <a href="Details.html" class="product-link"><img src="img/products/9f406493-d63a-43d6-9e3c-36d8e430f351.jpg" alt="صورة المنتج 1"></a>
+                            </div>
+                            <div class="stars">
+                                <i class="fa-solid fa-star"></i>
+                                <i class="fa-solid fa-star"></i>
+                                <i class="fa-solid fa-star"></i>
+                                <i class="fa-solid fa-star"></i>
+                                <i class="fa-solid fa-star-half-alt"></i>
+                            </div>
+                            <p class="name_product"><a href="Details.html" class="product-link">بلاي ستيشين 5، مع أداة تحكم، و راتشت اند كلانك
+                            </a></p>
+                            <div class="price">
+                                <p><span>300 دينار أردني</span></p>
+                            </div>
+                            <div class="icons">
+                                <span class="btn_add_cart" data-id="237">
+                                    <i class="fa-solid fa-cart-shopping"></i> أضف للسلة
+                                </span>
+                                <span class="icon_product"><i class="fa-regular fa-heart"></i></span>
+                            </div>
+                        </div>
+                        <div class="swiper-slide product">
+                            <div class="img_product">
+                                <a href="Details.html" class="product-link"><img src="img/products/fcd49a39-e997-4493-b538-fa4a07496f1a.jpg" alt="صورة المنتج 1"></a>
+                            </div>
+                            <div class="stars">
+                                <i class="fa-solid fa-star"></i>
+                                <i class="fa-solid fa-star"></i>
+                                <i class="fa-solid fa-star"></i>
+                                <i class="fa-solid fa-star"></i>
+                                <i class="fa-solid fa-star-half-alt"></i>
+                            </div>
+                            <p class="name_product"><a href="Details.html" class="product-link">بلاي ستيشين 5، مع سماعة لا سلكية، أداة تحكم
+                            </a></p>
+                            <div class="price">
+                                <p><span>350 دينار أردني</span></p>
+                            </div>
+                            <div class="icons">
+                                <span class="btn_add_cart" data-id="238">
+                                    <i class="fa-solid fa-cart-shopping"></i> أضف للسلة
+                                </span>
+                                <span class="icon_product"><i class="fa-regular fa-heart"></i></span>
+                            </div>
+                        </div>
+                        <div class="swiper-slide product">
+                            <div class="img_product">
+                                <a href="Details.html" class="product-link"><img src="img/products/56615b70-93b0-4705-b0b0-f797fa696d80.png" alt="صورة المنتج 1"></a>
+                            </div>
+                            <div class="stars">
+                                <i class="fa-solid fa-star"></i>
+                                <i class="fa-solid fa-star"></i>
+                                <i class="fa-solid fa-star"></i>
+                                <i class="fa-solid fa-star"></i>
+                                <i class="fa-solid fa-star-half-alt"></i>
+                            </div>
+                            <p class="name_product"><a href="Details.html" class="product-link">Sony Smart TV 55" X90J With Playstation 5 Bluray & 2 Controllers
+                            </a></p>
+                            <div class="price">
+                                <p><span>1300 دينار أردني</span></p>
+                            </div>
+                            <div class="icons">
+                                <span class="btn_add_cart" data-id="239">
+                                    <i class="fa-solid fa-cart-shopping"></i> أضف للسلة
+                                </span>
+                                <span class="icon_product"><i class="fa-regular fa-heart"></i></span>
+                            </div>
+                        </div>
+                        <div class="swiper-slide product">
+                            <div class="img_product">
+                                <a href="Details.html" class="product-link"><img src="img/products/5455c919-af06-4437-b88d-7882096c9608.jpg" alt="صورة المنتج 1"></a>
+                            </div>
+                            <div class="stars">
+                                <i class="fa-solid fa-star"></i>
+                                <i class="fa-solid fa-star"></i>
+                                <i class="fa-solid fa-star"></i>
+                                <i class="fa-solid fa-star"></i>
+                                <i class="fa-solid fa-star-half-alt"></i>
+                            </div>
+                            <p class="name_product"><a href="Details.html" class="product-link">سوني بلايستيشن 5 سليم راي‎-‎جهاز اصدار بلو
+                            </a></p>
+                            <div class="price">
+                                <p><span>300 دينار أردني</span></p>
+                            </div>
+                            <div class="icons">
+                                <span class="btn_add_cart" data-id="240">
+                                    <i class="fa-solid fa-cart-shopping"></i> أضف للسلة
+                                </span>
+                                <span class="icon_product"><i class="fa-regular fa-heart"></i></span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="slide_product mySwiper">
+                    <div class="top_slide">
+                        <h2><i class="fa-solid fa-tags"></i>بلاي ستيشن 4</h2>
+                    </div>
+        
+                    <div class="products swiper-wrapper">
+
+                        <div class="swiper-slide product">
+                            <div class="img_product">
+                                <a href="Details.html" class="product-link"><img src="img/products/f0c2d42e-094b-4af3-afe0-cf43cf1cc5ad.jpg" alt="صورة المنتج 1"></a>
+                            </div>
+                            <div class="stars">
+                                <i class="fa-solid fa-star"></i>
+                                <i class="fa-solid fa-star"></i>
+                                <i class="fa-solid fa-star"></i>
+                                <i class="fa-solid fa-star"></i>
+                                <i class="fa-solid fa-star-half-alt"></i>
+                            </div>
+                            <p class="name_product"><a href="Details.html" class="product-link">بلاي ستيشين 4، 500 جيجا، مع يد اضافيه
+                            </a></p>
+                            <div class="price">
+                                <p><span>200 دينار أردني</span></p>
+                            </div>
+                            <div class="icons">
+                                <span class="btn_add_cart" data-id="241">
+                                    <i class="fa-solid fa-cart-shopping"></i> أضف للسلة
+                                </span>
+                                <span class="icon_product"><i class="fa-regular fa-heart"></i></span>
+                            </div>
+                        </div>
+                        <div class="swiper-slide product">
+                            <div class="img_product">
+                                <a href="Details.html" class="product-link"><img src="img/products/c5679408-6a3a-40d2-b603-af55571c5818.jpg" alt="صورة المنتج 1"></a>
+                            </div>
+                            <div class="stars">
+                                <i class="fa-solid fa-star"></i>
+                                <i class="fa-solid fa-star"></i>
+                                <i class="fa-solid fa-star"></i>
+                                <i class="fa-solid fa-star"></i>
+                                <i class="fa-solid fa-star-half-alt"></i>
+                            </div>
+                            <p class="name_product"><a href="Details.html" class="product-link">بلاي ستيشين 4، 500 جيجا، مع يد اضافيه ولعبه
+                            </a></p>
+                            <div class="price">
+                                <p><span>210 دينار أردني</span></p>
+                            </div>
+                            <div class="icons">
+                                <span class="btn_add_cart" data-id="242">
+                                    <i class="fa-solid fa-cart-shopping"></i> أضف للسلة
+                                </span>
+                                <span class="icon_product"><i class="fa-regular fa-heart"></i></span>
+                            </div>
+                        </div>
+                        <div class="swiper-slide product">
+                            <div class="img_product">
+                                <a href="Details.html" class="product-link"><img src="img/products/dd4690f9-56aa-49ac-be4d-21bef2815304.jpg" alt="صورة المنتج 1"></a>
+                            </div>
+                            <div class="stars">
+                                <i class="fa-solid fa-star"></i>
+                                <i class="fa-solid fa-star"></i>
+                                <i class="fa-solid fa-star"></i>
+                                <i class="fa-solid fa-star"></i>
+                                <i class="fa-solid fa-star-half-alt"></i>
+                            </div>
+                            <p class="name_product"><a href="Details.html" class="product-link">بلاي ستيشين 4، 500 جيجا، مع يد اضافيه ولعبه
+                            </a></p>
+                            <div class="price">
+                                <p><span>210 دينار أردني</span></p>
+                            </div>
+                            <div class="icons">
+                                <span class="btn_add_cart" data-id="243">
+                                    <i class="fa-solid fa-cart-shopping"></i> أضف للسلة
+                                </span>
+                                <span class="icon_product"><i class="fa-regular fa-heart"></i></span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>    
+        <div class="reviews-section">
+            <h2> آراء العملاء</h2>
+            <div class="reviews-slider" id="reviewsSlider">
+                <div class="review">
+                    <h3>أحمد محمد</h3>
+                    <p>"جودة المنتجات ممتازة وخدمة العملاء رائعة. أنصح الجميع بالشراء من هذا الموقع!"</p>
+                </div>
+                <div class="review">
+                    <h3>سارة علي</h3>
+                    <p>"تجربة تسوق رائعة وأسعار تنافسية. سأعود للشراء مرة أخرى بالتأكيد."</p>
+                </div>
+                <div class="review">
+                    <h3>محمد إبراهيم</h3>
+                    <p>"المنتجات أصلية والتوصيل سريع جدًا. أحببت الموقع كثيرًا."</p>
+                </div>
+                <div class="review">
+                    <h3>نور الهدى</h3>
+                    <p>"موقع رائع جدًا، أحببت التصميم وسهولة التنقل بين الأقسام."</p>
+                </div>
+                <div class="review">
+                    <h3>خالد محسن</h3>
+                    <p>"تعامل رائع ومنتجات تستحق كل قرش. أنصح به بشدة."</p>
+                </div>
+            </div>
+            <div class="dots" id="dots"></div>
         </div>
-        <div class="product-info">
-            <h1 id="product-title" class="product-title"></h1>
-            <div class="stars">
-                <i class="fa-solid fa-star"></i>
-                <i class="fa-solid fa-star"></i>
-                <i class="fa-solid fa-star"></i>
-                <i class="fa-solid fa-star"></i>
-                <i class="fa-solid fa-star"></i>
-            </div>
-            <div class="price">
-                <p id="product-price"><span>725 دينار أردني</span></p>
-            </div>
-            <div class="description">
-                <p>السعر شامل الضريبه</p>
-            </div>
-            <div class="extra-features">
-                <div class="feature">
-                    <i class="fa-solid fa-truck-fast"></i>
-                    <p>اطلب والتوصيل مجاني خلال 24 ساعة</p>
-                </div>
-                <div class="feature">
-                    <i class="fa-solid fa-shield"></i>
-                    <p>ضمان لمدة عامين</p>
-                </div>
-                <div class="feature">
-                    <i class="fa-solid fa-credit-card"></i>
-                    <p>احصل عليه باقساط شهرية تبدا بدفعة 50 دينار والباقي اقساط</p>
-                </div>
-                <div class="terms">
-                    <h3>حسب سياسة المتجر</h3>
-                    <ul>
-                        <li><i class="fa-solid fa-check"></i> أن تكون مواطن أو مقيم</li>
-                        <li><i class="fa-solid fa-check"></i> يتوفر لديك حساب بنكي</li>
-                        <li><i class="fa-solid fa-check"></i> عند استلامك للجهاز يتم توقيعك على عقد الالتزام بالأقساط الشهرية مع مندوب التوصيل</li>
-                    </ul>
-                </div>
-            </div>
-            
-            <div class="actions">
-                <button class="btn btn-cart"><i class="fa-solid fa-cart-shopping"></i> أضف إلى السلة</button>
-            </div>
-        </div>
-    </div>
     <footer id="foot">
         <div class="container">
             <div class="big_row">
@@ -187,7 +427,6 @@
                     <a href="iphone14.html"><i class="fa-solid fa-caret-right"></i> ايفون 14 بانواعه</a>
                     <a href="iphone13.html"><i class="fa-solid fa-caret-right"></i> ايفون 13 بانواعه</a>
                     <a href="iphone12.html"><i class="fa-solid fa-caret-right"></i> ايفون 12 بانواعه</a>
-
                 </div>
             </div>
     
@@ -214,7 +453,7 @@
     
         <div class="bottom_footer">
             <div class="container">
-                <p>&copy; <span>تيم ستور </span> جميع الحقوق محفوظة</p>
+                <p>&copy; <span>ايفون ستور</span> جميع الحقوق محفوظة</p>
     
                 <div class="payment_img">
                     <img src="img/payment_method.png" alt="طرق الدفع">
@@ -224,7 +463,7 @@
     </footer>
 
     <div class="whatsapp-chat">
-        <a href="https://wa.me/+966552538392" target="_blank" aria-label="Chat with us on WhatsApp">
+        <a href="https://wa.me/+962776839371" target="_blank" aria-label="Chat with us on WhatsApp">
           <i class="fab fa-whatsapp"></i>
           <span>محادثة واتساب</span>
         </a>
@@ -232,9 +471,7 @@
 
        <!-- Swiper JS -->
   <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
-<script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
 
-<script src="JS/details.js"></script>
       <!-- File JS -->
      
       <!-- <script src="JS/swiper.js"></script> -->
