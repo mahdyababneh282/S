@@ -201,4 +201,3 @@ function updateButtonsState(productId) {
 
 updateCart();
 
-
