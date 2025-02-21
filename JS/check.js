@@ -336,7 +336,7 @@ document.getElementById("cvv").addEventListener("input", function (e) {
                 <img src="${item.img}" alt="">
                 <div class="content">
                     <h4>${item.name}</h4>
-                    <p class="price_cart">ر.س${total_Price_item.toFixed(2)}</p>
+                    <p class="price_cart">دينار أردني${total_Price_item.toFixed(2)}</p>
                     <div class="quantity_control">
                         <button class="decrease_quantity" data-index="${index}">-</button>
                         <span class="quantity">${item.quantity}</span>
