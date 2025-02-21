@@ -348,7 +348,7 @@ document.getElementById("cvv").addEventListener("input", function (e) {
         `;
     });
 
-    document.querySelector(".total_checkout").textContent = `ر.س${cartTotalPrice.toFixed(2)}`;
+    document.querySelector(".total_checkout").textContent = `دينار أردني${cartTotalPrice.toFixed(2)}`;
     setupCheckoutButtons();
 });
 
